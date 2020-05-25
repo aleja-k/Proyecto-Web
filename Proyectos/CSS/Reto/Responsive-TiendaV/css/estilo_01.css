@@ -1,0 +1,146 @@
+/*
+  KAREN ALEJANDRA PERDOMO COMBA
+  CÓDIGO:20182173393
+  PROGRAMACIÓN WEB
+*/
+body {
+	margin: 0px;
+}
+
+/* cabezote */
+header {
+	background-color: yellow;
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+  width: auto;
+}
+header h1 {
+	margin: 0px;
+	padding: 10px;
+	font-size: auto;
+	text-align: middle;
+}
+
+/* menu horizontal */
+.menu_hor {
+	  list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: green;
+}
+.menu_hor li {
+  float: left;
+  border-right: 1px solid yellow;
+}
+.menu_hor li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+.menu_hor li:last-child {
+  border-right: none;
+}
+
+/* maquetación productos y banners */
+section {  
+	float: left;
+	margin-left: 1px;	
+  width: auto;
+  display: block;
+}
+aside {
+	float: left;
+  margin-left: 1px;
+  width: auto;
+}
+aside img {
+	 float: left;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+article {
+	clear: both;
+	/*border-bottom: dashed gray 1px;*/
+}
+article img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* pie de página */
+footer {
+	clear: both;
+	background-color: yellow;
+	margin: 0px;
+	padding: 5px;
+	border-top: 2px solid black;
+	font-family: Arial;
+}
+
+div{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 2px;
+}
+
+div > * {
+    border: 1px solid ;
+    padding: 10px;
+    grid-column: col-start / span 12;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+ 
+
+	section{
+     grid-column: col-start / span 8;
+	}
+  
+  aside{
+      display: block;
+      grid-column: col-start 9 / span 5;
+  }
+
+
+
+}
+@media screen and (min-width: 800px)  {
+	 
+    nav{
+        float: left;
+        background-color: green;
+        flex-direction: column;
+        
+    }
+    .menu_hor {
+        
+        display: grid;
+        
+    }
+    header{
+      grid-column: col-start / span 2;
+      font-size: auto;
+    }
+    section{
+        float: left;
+        margin-left: none;
+        grid-column: col-start 3 / span 6;
+    }
+    aside{
+        float: right;
+        margin-left: 1px;
+        display: block;
+        grid-column: col-start 9/ span 4;
+    }
+
+}
